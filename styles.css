@@ -75,6 +75,16 @@ button {
     animation: scroll 1000ms infinite alternate-reverse;
 }
 
+@keyframes scroll {
+    0% {
+        transform: translateY(4px);
+    }
+    
+    100% {
+        transform: translateY(-4px);
+    }
+}
+
 .click {
     transition: all 300ms ease;
 }
@@ -87,14 +97,31 @@ button {
     transform: scale(0.8);
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateY(4px);
-    }
-    
-    100% {
-        transform: translateY(-4px);
-    }
+.link__hover-effect {
+    position: relative;
+}
+
+.link__hover-effect--white:after {
+    background-color: white;
+}
+
+.link__hover-effect--black:after {
+    background-color: black;
+}
+
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect:hover:after {
+    left: 0;
+    width: 100%;
 }
 
 /*NAVIGATION BAR*/
