@@ -22,10 +22,6 @@ section {
     background-color: rgb(245, 245, 245);
 }
 
-.container {
-    padding: 48px 0;
-}
-
 .row {
     width: 100%;
     max-width: 1100px;
@@ -199,6 +195,11 @@ nav {
     margin-bottom: 60px;
 }
 
+.projects__container {
+    padding: 48px 0;
+    width: 100%;
+}
+
 .project__img {
     width: 100%;
     transition: all 450ms ease;
@@ -266,4 +267,38 @@ nav {
 
 .project__description--parag {
     margin: 16px 0;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #242424;
+    display: flex;
+}
+
+.footer__container {
+    width: 100%;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo--img {
+    width: 150px;
+    filter: invert(1);
+}
+
+.footer__social--list {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__social--link, .footer__copyright {
+    color: white;
+    margin-bottom: 48px;
 }
