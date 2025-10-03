@@ -29,16 +29,16 @@
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link--list-item">
-                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a>
+                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black" onclick="toggleModal()">About</a>
                 </li>
                 <li class="nav__link--list-item">
-                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
+                    <a href="#projects" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
                 </li>
                 <li class="nav__link--list-item">
-                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a>
+                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black" onclick="toggleModal()">Contact</a>
                 </li>
                 <li class="nav__link--list-item click">
-                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">
+                    <a href="#" class="nav__link--anchor">
                         <i class="fa-solid fa-circle-half-stroke"></i>
                     </a>
                 </li>
@@ -53,7 +53,7 @@
                     I'm a <b class="blue">Software Engineer</b> with a strong passion for building Full Stack web
                     applications with great user experiences.
                     <br>
-                    Here's a bit more <b class="blue">about me</b>.
+                    Here's a bit more <b class="blue click link__hover-effect link__hover-effect--black" onclick="toggleModal()">about me</b>.
                 </p>
                 <div class="social__list">
                     <a href="https://www.linkedin.com/in/ahmedjoyali/" target="_blank" class="social__link click">
@@ -69,7 +69,7 @@
             </div>
         </header>
 
-        <button class="mail__button click">
+        <button class="mail__button click" onclick="toggleModal()">
             <i class="fa-solid fa-envelope"></i>
         </button>
 
@@ -137,6 +137,7 @@
             </div>
 
             <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
                 <h3 class="modal__subtitle--contact">I'm currently open to new opportunities.</h3>
                 <form id="contact__form" onsubmit="contact(event)">
@@ -163,10 +164,7 @@
                     Thank you for the message! Looking forward to connecting with you soon!
                 </div>
             </div>
-            <i class="fas fa-times modal__exit click"></i>
-
         </div>
-
     </section>
 
     <section id="projects">
