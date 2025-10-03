@@ -11,6 +11,17 @@
     scroll-behavior: smooth;
 }
 
+.dark-mode .title, .dark-mode .section__title,
+.dark-mode .section__subtitle, .dark-mode .nav__link--anchor,
+.dark-mode .fa-adjust, .dark-mode .header__parag {
+    color: white;
+}
+
+.dark-mode section {
+    background-color: #242424;
+}
+
+
 nav, .scroll, .header {
     opacity: 1;
     visibility: visible;
@@ -33,6 +44,7 @@ a {
 
 section {
     background-color: rgb(245, 245, 245);
+    transition: all 300ms ease;
 }
 
 .row {
@@ -88,6 +100,14 @@ button {
     animation: scroll 1000ms infinite alternate-reverse;
 }
 
+.dark-mode .scroll__icon {
+    border-color: white;
+}
+
+.dark-mode .scroll__icon:after {
+    background-color: white;
+}
+
 @keyframes scroll {
     0% {
         transform: translateY(4px);
@@ -136,6 +156,10 @@ button {
 .link__hover-effect:hover:after {
     left: 0;
     width: 100%;
+}
+
+.dark-mode .link__hover-effect--black:after {
+    background-color: white;
 }
 
 input, textarea {
@@ -207,6 +231,10 @@ nav {
     font-size: 30px;
 }
 
+.dark-mode #navbar-logo {
+    filter: invert();
+}
+
 /* LANDING PAGE */
 
 #landing-page {
@@ -258,6 +286,11 @@ nav {
     border-radius: 50%;
     background-color: #242424;
     color: white;
+}
+
+.dark-mode .mail__button {
+    background-color: white;
+    color: #242424;
 }
 
 /* MODAL */

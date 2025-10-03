@@ -1,3 +1,17 @@
+let isModalOpen = false;
+let contrastToggle = false;
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle
+
+    if (contrastToggle) {
+        document.body.classList += " dark-mode"
+    }
+    else {
+        document.body.classList.remove("dark-mode")
+    }
+}
+
 function contact() {
     event.preventDefault()
 
@@ -18,8 +32,6 @@ function contact() {
         alert("The email service is temporarily unavailable. Please contact me directly at TheAhmedJoyAli@gmail.com")
     })
 }
-
-let isModalOpen = false;
 
 function toggleModal() {
     if (isModalOpen) {
