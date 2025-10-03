@@ -54,7 +54,7 @@ section {
     padding: 0 12px;
 }
 
-.title {
+.title, .subtitle {
     font-size: 76px;
     margin-bottom: 12px;
     text-align: left;
@@ -286,6 +286,12 @@ nav {
     border-radius: 50%;
     background-color: #242424;
     color: white;
+}
+
+.modal--open .mail__button {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease-in-out;
 }
 
 .dark-mode .mail__button {
