@@ -28,7 +28,7 @@ nav, .scroll, .header {
     transition: all 600ms 800ms;
 }
 
-.modal--open nav, .modal--open .scroll, .modal--open .header {
+.modal--open nav, .modal--open .scroll, .modal--open .header, .modal--open .shape{
     opacity: 0;
     visibility: hidden;
     transition: all 400ms;
@@ -249,6 +249,7 @@ nav {
     padding: 0 30px;
     width: 100%;
     max-width: 1000px;
+    z-index: 100;
 }
 
 .header__parag {
@@ -583,4 +584,55 @@ footer {
 .footer__social--link, .footer__copyright {
     color: white;
     margin-bottom: 48px;
+}
+
+/* SHAPE ANIMATIONS */
+
+.shape {
+    position: absolute;
+}
+
+.shape--0 {
+    top: 15vh;
+    left: 5vw;
+}
+
+.shape--1 {
+    top: 15vh;
+    left: 50vw;
+}
+
+.shape--2 {
+    top: 15vh;
+    left: 80vw;
+}
+
+.shape--3 {
+    top: 50vh;
+    left: 5vw;
+}
+
+.shape--4 {
+    top: 50vh;
+    left: 50vw;
+}
+
+.shape--5 {
+    top: 50vh;
+    left: 80vw;
+}
+
+.shape--6 {
+    top: 80vh;
+    left: 5vw;
+}
+
+.shape--7 {
+    top: 80vh;
+    left: 50vw;
+}
+
+.shape--8 {
+    top: 80vh;
+    left: 80vw;
 }

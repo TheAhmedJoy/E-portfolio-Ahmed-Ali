@@ -1,6 +1,9 @@
+//Globals
 let isModalOpen = false;
 let contrastToggle = false;
+const scaleFactor = 1 / 20;
 
+//Dark mode toggle on/off visbility
 function toggleContrast() {
     contrastToggle = !contrastToggle
 
@@ -12,6 +15,19 @@ function toggleContrast() {
     }
 }
 
+//Modal toggle on/off visbility
+function toggleModal() {
+    if (isModalOpen) {
+        isModalOpen = false;
+        return document.body.classList.remove("modal--open")
+    }
+
+    isModalOpen = true;
+
+    document.body.classList += " modal--open"
+}
+
+//EmailJS API Integration
 function contact() {
     event.preventDefault()
 
@@ -33,13 +49,14 @@ function contact() {
     })
 }
 
-function toggleModal() {
-    if (isModalOpen) {
-        isModalOpen = false;
-        return document.body.classList.remove("modal--open")
+function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape")
+    const x = event.clientX * scaleFactor;
+    const y = event.clientY * scaleFactor;
+
+    for (let i = 0; i < shapes.length; ++i) {
+        const isOdd = i % 2 !== 0;
+        const invertInteger = isOdd ? -1 : 1;
+        shapes[i].style.transform = `translate(${x * invertInteger}px, ${y * invertInteger}px)`
     }
-
-    isModalOpen = true;
-
-    document.body.classList += " modal--open"
 }
