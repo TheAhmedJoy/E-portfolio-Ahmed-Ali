@@ -636,3 +636,64 @@ footer {
     top: 80vh;
     left: 80vw;
 }
+
+/* MEDIA RESPONSIVENESS */
+
+/* Tablets, Smart Phones */
+@media (max-width: 768px) {
+    .title, .subtitle {
+        font-size: 80px;
+    }
+
+    .header__parag {
+        font-size: 20px;
+    }
+
+    .modal {
+        top: 0;
+        left: 0;
+        height: auto;
+        width: 100%;
+        transform: none;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+    
+    .modal__half {
+        width: 100%;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .title, .subtitle {
+        font-size: 52px;
+    }
+
+    .header__parag {
+        font-size: 18px;
+    }
+
+    .nav__link:first-child {
+        display: none;
+    }
+
+    .project__description--subtitle {
+        margin-bottom: 8px;
+    }
+
+    .project__description {
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project__description--parag {
+        display: none;
+    }
+
+    .modal__half {
+        padding: 24px;
+    }
+}
