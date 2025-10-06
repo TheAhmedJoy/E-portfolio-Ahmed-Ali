@@ -490,12 +490,15 @@ nav {
 .section__title {
     text-align: center;
     font-size: 48px;
-    margin-bottom: 60px;
 }
 
 .projects__container {
     padding: 48px 0;
     width: 100%;
+}
+
+.project__list--item {
+    padding-top: 32px;
 }
 
 .project__img {
